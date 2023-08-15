@@ -21,7 +21,8 @@ var ScrollMagicPluginGsap = function(ScrollMagic, TweenMax, Timeline) {
     var NAMESPACE = "animation.gsap";
 
     // (BUILD) - REMOVE IN MINIFY - START
-    var console = window.console || {},
+    var _window = typeof window !== 'undefined' ? window.console : {};
+    var console = _window || {},
         err = Function.prototype.bind.call(
             console.error || console.log || function() {},
             console
